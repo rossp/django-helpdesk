@@ -81,6 +81,10 @@ HELPDESK_VIEW_A_TICKET_PUBLIC = getattr(settings, 'HELPDESK_VIEW_A_TICKET_PUBLIC
 HELPDESK_SUBMIT_A_TICKET_PUBLIC = getattr(settings, 'HELPDESK_SUBMIT_A_TICKET_PUBLIC', True)
 
 
+HELPDESK_FORM_TICKET_PUBLIC = getattr(
+    settings,
+    "HELPDESK_FORM_TICKET_PUBLIC", "helpdesk.forms.PublicTicketForm")
+
 ###################################
 # options for update_ticket views #
 ###################################
@@ -131,6 +135,42 @@ HELPDESK_EMAIL_FALLBACK_LOCALE = getattr(settings, 'HELPDESK_EMAIL_FALLBACK_LOCA
 HELPDESK_CREATE_TICKET_HIDE_ASSIGNED_TO = getattr(
     settings, 'HELPDESK_CREATE_TICKET_HIDE_ASSIGNED_TO', False)
 
+#settings for override view/staff.py forms easily
+HELPDESK_FORM_TICKET = getattr(
+    settings,
+    'HELPDESK_FORM_TICKET', "helpdesk.forms.TicketForm")
+
+HELPDESK_FORM_USERSETTING = getattr(
+    settings,
+    "HELPDESK_FORM_USERSETTING", "helpdesk.forms.UserSettingsForm")
+
+HELPDESK_FORM_EMAIL_IGNORE = getattr(
+    settings,
+    "HELPDESK_FORM_EMAIL_IGNORE", "helpdesk.forms.EmailIgnoreForm")
+
+HELPDESK_FORM_EDIT_TICKET = getattr(
+    settings,
+    "HELPDESK_FORM_EDIT_TICKET", "helpdesk.forms.EditTicketForm")
+
+HELPDESK_FORM_TICKETCC = getattr(
+    settings,
+    "HELPDESK_FORM_TICKETCC", "helpdesk.forms.TicketCCForm")
+
+HELPDESK_FORM_TICKETCC_EMAIL = getattr(
+    settings,
+    "HELPDESK_FORM_TICKETCC_EMAIL", "helpdesk.forms.TicketCCEmailForm")
+
+HELPDESK_FORM_TICKETCC_USER = getattr(
+    settings,
+    "HELPDESK_FORM_TICKETCC_USER", "helpdesk.forms.TicketCCUserForm")
+
+HELPDESK_FORM_EDIT_FOLLOWUP = getattr(
+    settings,
+    "HELPDESK_FORM_EDIT_FOLLOWUP", "helpdesk.forms.EditFollowUpForm")
+
+HELPDESK_FORM_TICKET_DEPENDENCY = getattr(
+    settings,
+    "HELPDESK_FORM_TICKET_DEPENDENCY", "helpdesk.forms.TicketDependencyForm")
 
 #################
 # email options #
